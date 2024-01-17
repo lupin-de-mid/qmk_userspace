@@ -1,0 +1,3 @@
+[submodule "lang_shift"]
+	path = keyboards/sofle/rev1/keymaps/swinokey2/lang_shift
+	url = git@github.com:lupin-de-mid/lang_shift.git
