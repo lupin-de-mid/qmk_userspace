@@ -220,7 +220,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [L_GREEN] = MY_layout(
         // LEFT HALF
-         TG_RED,   KC_F7,   KC_F5,   KC_F1,   KC_F1,   KC_F9,
+         TG_GREEN,   KC_F7,   KC_F5,   KC_F1,   KC_F1,   KC_F9,
         _______, KC_HOME, KC_PGDN, KC_PGUP,  KC_END, _______,
         _______, KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT, _______,
         _______, CT_LEFT, CT_DOWN,   CT_UP, CT_RGHT, _______, _______,
