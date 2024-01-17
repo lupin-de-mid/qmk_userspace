@@ -136,14 +136,14 @@ TT_RED,  CMB_SPC, CMB_DOT, CMB_ALT, TT_GREEN \
       \
       /*-----------------------------------------------------------------*/ \
       [L_SHIFT] = MY_layout(/* LEFT HALF */ \
-        _______, AG_7, AG_5, AG_3, AG_1, AG_9, \
+        _______, AG_1, AG_2, AG_3, AG_4, AG_5, \
         _______, SLU1,    SLU2,    SLU3,    SLU4,    SLU5,     \
         _______, SLH1,    SLH2,    SLH3,    SLH4,    SLH5,     \
         _______,    SLD1,    SLD2,    SLD3,    SLD4,    SLD5, _______,\
                        _______, _______, _______, _______, _______,\
         \
         /* RIGHT HALF */ \
-         AG_0,    AG_2,    AG_4,    AG_6,    AG_8,    CT_Y, \
+         AG_6,    AG_7,    AG_8,    AG_9,    AG_0,    CT_Y, \
          SRU1,    SRU2,    SRU3,    SRU4,    SRU5,    EN_TILD, \
          SRH1,    SRH2,    SRH3,    SRH4,    SRH5,    SRH6, \
  _______, SRD1,    SRD2,    SRD3,    SRD4,    SRD5,    SRD6, \
