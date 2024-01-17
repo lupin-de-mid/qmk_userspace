@@ -1,0 +1,26 @@
+{
+    "configurations": [
+        {
+            "type": "command",
+            "name": "QMK flash sofle swinokey2",
+            "program": "qmk",
+            "args": [ "flash", "-kb", "sofle", "-km" ,"swinokey2"],
+            "workingDir": "../qmk",
+        },
+        {
+            "type": "command",
+            "name": "QMK build sofle swinokey2",
+            "program": "qmk",
+            "args": [ "compile", "-kb", "sofle", "-km" ,"swinokey2"],
+            "workingDir": "../qmk",
+        },
+        {
+            "type": "command",
+            "name": "Prepare Compilation metadata",
+            "program": "qmk",
+            "args": ["generate-compilation-database", "-kb", "sofle", "-km", "swinokey2"],
+            "workingDir": "../qmk",
+        }
+
+    ]
+}
