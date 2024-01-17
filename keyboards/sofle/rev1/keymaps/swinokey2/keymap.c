@@ -272,24 +272,6 @@ const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
     green_layer
 );
 
-//const ComboWithKeycode combos[] PROGMEM = {
-//    CHORD(MO(4),         CMB_000),
-//};
-
-//const uint8_t combos_size = sizeof(combos)/sizeof(ComboWithKeycode);
-const uint16_t tt_keys[][3] = {
-//   { TT_CTJ, CT_J,  CT_BSLS }, // Убийство программы, если нажать три раза, то выдаёт Ctrl+\, что убивает безоговорочно.
-    { TT_RED,  MO_RED,  TG_RED },
-    { TT_GREEN,  MO_GREEN,  TG_GREEN }
-//    { TT_VIOL, MO_VIOL, TG_VIOL },
-//    { TT_GRAY, MO_GRAY, TG_GRAY },
-//    { TT_CYAN, MO_CYAN, TG_CYAN },
-//    { TT_YELW, MO_YELW, TG_YELW },
-//    { TT_GAME, MO_GAME, TG_GAME },
-//    { TT_NUCL, MO_NUCL, TG_NUCL },
-};
-const uint8_t tt_size = sizeof(tt_keys)/(sizeof(uint16_t) * 3);
-
 layer_state_t layer_state_set_user(layer_state_t state) {
     rgblight_set_layer_state(0, layer_state_cmp(state, L_EN));
     rgblight_set_layer_state(1, layer_state_cmp(state, L_EN_S));
