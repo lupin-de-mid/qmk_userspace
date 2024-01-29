@@ -16,7 +16,8 @@ enum sofle_layers {
     L_RU,
     L_RU_S,
     L_RED,
-    L_GREEN
+    L_GREEN,
+    L_PURPLE
 };
 
 
@@ -28,6 +29,10 @@ enum sofle_layers {
 #define TG_GREEN TG(L_GREEN)
 #define MO_GREEN MO(L_GREEN)
 #define TT_GREEN TT(L_GREEN)
+
+#define TG_PURPLE TG(L_PURPLE)
+#define TT_PURPLE TT(L_PURPLE)
+#define MO_PURPLE MO(L_PURPLE)
 
 //remap order of buutons from left right to lines
 #define MY_layout( \
@@ -95,6 +100,7 @@ LAYOUT( \
 
 #define CT_ENT LCTL(KC_ENT)
 #define CT_BSPC LCTL(KC_BSPC)
+
 
 // Этот макрос нужен, чтобы задавать одинаковые слои (в том числе и шифтовый слой) для английского и русского языка. В итоге их отличия будут только в буквах.
 /// Позволяет задавать только изенившеяся клавиши языковые, проставляя все остальное автоматом
@@ -234,6 +240,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, _______, _______, _______, _______
         ),
 
+     [L_PURPLE] = MY_layout(
+        // LEFT HALF
+         TG_PURPLE,   KC_F7,   KC_F5,   KC_F1,   KC_F1,   KC_F9,
+        _______, KC_HOME, KC_PGDN, KC_PGUP,  KC_END, _______,
+        _______, KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT, _______,
+        _______, CT_LEFT, CT_DOWN,   CT_UP, CT_RGHT, _______, _______,
+                          _______, _______, _______, _______, _______,
+
+        // RIGHT HALF
+                  KC_F10,   KC_F2,   KC_F4,   KC_F6,   KC_F8, _______,
+                 CMB_RB2, CMB_RB1, CMB_LB1, CMB_LB2, _______, _______,
+                 CMB_LB4, CMB_LB3, CMB_RB3, CMB_RB4, _______, _______,
+        _______,  KC_TAB, _______, _______, _______, _______, _______,
+        _______, _______, _______, _______, _______
+        ),
+
 };
 
 #define HSV_CYAN_D        188, 255, 255
@@ -263,13 +285,18 @@ const rgblight_segment_t PROGMEM green_layer[] = RGBLIGHT_LAYER_SEGMENTS(
     {0, RGBLED_NUM, HSV_GREEN}
 );
 
+const rgblight_segment_t PROGMEM purple_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+    {0, RGBLED_NUM, HSV_PURPLE}
+);
+
 const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
     en_layer_l,
     en_layer_d,
     ru_layer_l,
     ru_layer_d,
     red_layer,
-    green_layer
+    green_layer,
+    purple_layer
 );
 
 layer_state_t layer_state_set_user(layer_state_t state) {
@@ -279,6 +306,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     rgblight_set_layer_state(3, layer_state_cmp(state, L_RU_S));
     rgblight_set_layer_state(4, layer_state_cmp(state, L_RED));
     rgblight_set_layer_state(5, layer_state_cmp(state, L_GREEN));
+    rgblight_set_layer_state(6, layer_state_cmp(state, L_PURPLE));
     return state;
 }
 
@@ -392,6 +420,20 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         return false;
     return true;
 }
+enum combos {
+  RED_SPACE_PURPLE,
+  T_RU_SF,
+  ST_RU_S_SF
+};
+
+const uint16_t PROGMEM test_combo2[] = { TT_RED,  CMB_SPC, COMBO_END};
+const uint16_t PROGMEM test_combo3[] = { RU_T,  RU_SF, COMBO_END};
+const uint16_t PROGMEM test_combo35[] = { RU_S_T,  RU_S_SF, COMBO_END};
+combo_t key_combos[] = {
+        [RED_SPACE_PURPLE]=COMBO(test_combo2, TT_PURPLE),
+        [T_RU_SF]=COMBO(test_combo3,RU_HD),
+        [ST_RU_S_SF]=COMBO(test_combo35,RU_S_HD)// keycodes with modifiers are possible too!
+};
 
 #ifdef ENCODER_ENABLE
 

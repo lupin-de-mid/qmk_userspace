@@ -4,6 +4,8 @@
 see https://docs.qmk.fm/#/feature_split_keyboard?id=setting-handedness
 for more options.
 */
+#define TAPPING_TOGGLE 2
+#define COMBO_COUNT 3
 
 #define LANG_CHANGE_DEFAULT LANG_CHANGE_SHIFT_ALT
 
