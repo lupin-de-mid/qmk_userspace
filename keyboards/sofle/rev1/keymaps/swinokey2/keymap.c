@@ -34,6 +34,8 @@ enum sofle_layers {
 #define TT_PURPLE TT(L_PURPLE)
 #define MO_PURPLE MO(L_PURPLE)
 
+#define MT_ENTER LT(TT_RED, CMB_ENT)
+
 //remap order of buutons from left right to lines
 #define MY_layout( \
     K00, K01, K02, K03, K04, K05,  \
@@ -131,7 +133,7 @@ LAYOUT( \
         AG_UNDS,     LU1,     LU2,      LU3,     LU4,     LU5,    \
         CMB_DQUE,    LH1,     LH2,      LH3,     LH4,     LH5,   \
         EN_QUOT,     LD1,     LD2,      LD3,     LD4,     LD5,   _______,      \
-                 CMB_CTL,  CMB_LAN, CMB_BSP, CMB_SFT, CMB_ENT, \
+                 CMB_CTL,  CMB_LAN, CMB_BSP, CMB_SFT, MT_ENTER, \
         /* RIGHT HALF */ \
          CMB_ASR, CMB_EXL,CMB_QUE, EN_HASH, AG_SLSH, CT_Z, \
              RU1,     RU2,     RU3,       RU4,     RU5,     AG_MINS, \
