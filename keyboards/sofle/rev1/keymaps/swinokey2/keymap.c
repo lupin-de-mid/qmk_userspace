@@ -133,7 +133,7 @@ LAYOUT( \
         AG_MINS,     LU1,     LU2,      LU3,     LU4,     LU5,    \
         CMB_DQUE,    LH1,     LH2,      LH3,     LH4,     LH5,   \
         EN_SLSH,     LD1,     LD2,      LD3,     LD4,     LD5,   _______,      \
-                 CMB_CTL,  CMB_LAN, CMB_BSP, CMB_SFT, MT_ENTER, \
+                           CMB_CTL,  CMB_LAN, CMB_BSP, CMB_SFT, MT_ENTER, \
         /* RIGHT HALF */ \
          EN_CIRC, EN_AMPR ,EN_ASTR, EN_QUES, EN_QUOT, CT_Z, \
              RU1,     RU2,     RU3,       RU4,     RU5,      RU6, \
