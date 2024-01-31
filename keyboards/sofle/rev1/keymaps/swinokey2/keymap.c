@@ -428,13 +428,13 @@ enum combos {
   ST_RU_S_SF
 };
 
-const uint16_t PROGMEM test_combo2[] = { TT_RED,  CMB_SPC, COMBO_END};
-const uint16_t PROGMEM test_combo3[] = { RU_T,  RU_SF, COMBO_END};
-const uint16_t PROGMEM test_combo35[] = { RU_S_T,  RU_S_SF, COMBO_END};
+const uint16_t PROGMEM purple_combo[] = { TT_RED,  CMB_SPC, COMBO_END};
+const uint16_t PROGMEM ru_hd_combo[] = { RU_T,  RU_SF, COMBO_END};
+const uint16_t PROGMEM ru_s_hd_combo[] = { RU_S_T,  RU_S_SF, COMBO_END};
 combo_t key_combos[] = {
-        [RED_SPACE_PURPLE]=COMBO(test_combo2, TT_PURPLE),
-        [T_RU_SF]=COMBO(test_combo3,RU_HD),
-        [ST_RU_S_SF]=COMBO(test_combo35,RU_S_HD)// keycodes with modifiers are possible too!
+        [RED_SPACE_PURPLE]=COMBO(purple_combo, TT_PURPLE),
+        [T_RU_SF]=COMBO(ru_hd_combo,RU_HD),
+        [ST_RU_S_SF]=COMBO(ru_s_hd_combo,RU_S_HD)// keycodes with modifiers are possible too!
 };
 
 #ifdef ENCODER_ENABLE
