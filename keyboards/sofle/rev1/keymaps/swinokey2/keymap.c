@@ -113,18 +113,18 @@ LAYOUT( \
        LH1, LH2, LH3, LH4, LH5, \
        LD1, LD2, LD3, LD4, LD5, \
  /* Right hand */ \
-       RU1, RU2, RU3, RU4, RU5, \
+       RU1, RU2, RU3, RU4, RU5, RU6, \
        RH1, RH2, RH3, RH4, RH5, RH6, \
-       RD1, RD2, RD3, RD4, RD5, RD6, \
+       RD1, RD2, RD3, RD4, RD5, \
   /* ---------------------------- Shift layer ---------------------------- */ \
     /* Left hand */ \
        SLU1, SLU2, SLU3, SLU4, SLU5, \
        SLH1, SLH2, SLH3, SLH4, SLH5, \
        SLD1, SLD2, SLD3, SLD4, SLD5, \
  /* Right hand */ \
-       SRU1, SRU2, SRU3, SRU4, SRU5, \
+       SRU1, SRU2, SRU3, SRU4, SRU5, SRU6,\
        SRH1, SRH2, SRH3, SRH4, SRH5, SRH6, \
-       SRD1, SRD2, SRD3, SRD4, SRD5, SRD6 \
+       SRD1, SRD2, SRD3, SRD4, SRD5 \
 ) \
 /*-------------------------------------------------------------------------*/ \
       [L_DEFAULT] = MY_layout(  \
@@ -136,9 +136,9 @@ LAYOUT( \
                  CMB_CTL,  CMB_LAN, CMB_BSP, CMB_SFT, MT_ENTER, \
         /* RIGHT HALF */ \
          CMB_ASR, CMB_EXL,CMB_QUE, EN_HASH, AG_SLSH, CT_Z, \
-             RU1,     RU2,     RU3,       RU4,     RU5,     AG_MINS, \
-             RH1,     RH2,     RH3,       RH4,     RH5,         RH6,                    \
-_______,     RD1,     RD2,     RD3,       RD4,     RD5,         RD6,                    \
+             RU1,     RU2,     RU3,       RU4,     RU5,      RU6, \
+             RH1,     RH2,     RH3,       RH4,     RH5,      RH6,                    \
+_______,     RD1,     RD2,     RD3,       RD4,     RD5,      AG_MINS,                    \
 TT_RED,  CMB_SPC, CMB_DOT, CMB_ALT, TT_GREEN \
       ), \
       \
@@ -152,9 +152,9 @@ TT_RED,  CMB_SPC, CMB_DOT, CMB_ALT, TT_GREEN \
         \
         /* RIGHT HALF */ \
          AG_6,    AG_7,    AG_8,    AG_9,    AG_0,    CT_Y, \
-         SRU1,    SRU2,    SRU3,    SRU4,    SRU5,    EN_TILD, \
+         SRU1,    SRU2,    SRU3,    SRU4,    SRU5,    SRU6, \
          SRH1,    SRH2,    SRH3,    SRH4,    SRH5,    SRH6, \
- _______, SRD1,    SRD2,    SRD3,    SRD4,    SRD5,    SRD6, \
+ _______, SRD1,    SRD2,    SRD3,    SRD4,    SRD5,    EN_TILD,  \
  _______, _______, AG_COMM, _______, _______\
       ),
 
@@ -168,9 +168,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         EN_Z,  EN_X,    EN_C,    EN_V,    EN_B,
 
         /* Right hand */
-        EN_Y,    EN_U,    EN_I,    EN_O,    EN_P,
+        EN_Y,    EN_U,    EN_I,    EN_O,    EN_P, _______,
         EN_H,    EN_J,    EN_K,    EN_L, _______,    _______,
-        EN_N,    EN_M,   _______,_______,_______,_______,
+        EN_N,    EN_M,   _______,_______,_______,
 
         /* ---------------------------- Shift layer ---------------------------- */
        /* Left hand */
@@ -179,9 +179,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         EN_S_Z,  EN_S_X,    EN_S_C,    EN_S_V,    EN_S_B,
 
         /* Right hand */
-        EN_S_Y,    EN_S_U,    EN_S_I,    EN_S_O,  EN_S_P,
+        EN_S_Y,    EN_S_U,    EN_S_I,    EN_S_O,  EN_S_P, _______,
         EN_S_H,    EN_S_J,    EN_S_K,    EN_S_L, _______, _______,
-        EN_S_N,    EN_S_M,   _______,   _______, _______, _______
+        EN_S_N,    EN_S_M,   _______,   _______,  _______
         )
 
     LANG_TWO_LAYERS(
@@ -193,9 +193,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         RU_JA,  RU_CH,    RU_S,    RU_M,    RU_I,
 
         /* Right hand */
-        RU_N,    RU_G,    RU_SH,   RU_SC,    RU_Z,
+        RU_N,    RU_G,    RU_SH,   RU_SC,    RU_Z,    RU_H ,
         RU_R,    RU_O,    RU_L,    RU_D,    RU_ZH,    RU_E,
-        RU_T,    RU_SF,   RU_B,    RU_JU,    _______,   _______,
+        RU_T,    RU_SF,   RU_B,    RU_JU,    _______,
 
        /* ---------------------------- Shift layer ---------------------------- */
        /* Left hand */
@@ -204,9 +204,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         RU_S_JA, RU_S_CH,    RU_S_S,    RU_S_M,    RU_S_I,
 
         /* Right hand */
-        RU_S_N,    RU_S_G,    RU_S_SH,    RU_S_SC,    RU_S_Z,
+        RU_S_N,    RU_S_G,    RU_S_SH,    RU_S_SC,    RU_S_Z, RU_S_H,
         RU_S_R,    RU_S_O,    RU_S_L,     RU_S_D,     RU_S_ZH,    RU_S_E,
-        RU_S_T,    RU_S_SF,    RU_S_B,     RU_S_JU,    _______,   _______
+        RU_S_T,    RU_S_SF,    RU_S_B,     RU_S_JU,   _______
         )
 
 
