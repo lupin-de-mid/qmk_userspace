@@ -204,7 +204,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         RU_S_JA, RU_S_CH,    RU_S_S,    RU_S_M,    RU_S_I,
 
         /* Right hand */
-        RU_S_N,    RU_S_G,    RU_S_SH,    RU_S_SC,    RU_S_Z, RU_S_H,
+        RU_S_N,    RU_S_G,    RU_S_SH,    RU_S_SC,    RU_S_Z,     RU_S_H,
         RU_S_R,    RU_S_O,    RU_S_L,     RU_S_D,     RU_S_ZH,    RU_S_E,
         RU_S_T,    RU_S_SF,    RU_S_B,     RU_S_JU
         )
@@ -212,7 +212,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [L_RED] = MY_layout(
         // LEFT HALF
-         TG_RED,      KC_F1,   KC_F2   KC_F3,   KC_F4,   KC_F5,
+         TG_RED,      KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,
         _______,    KC_HOME, KC_PGDN, KC_PGUP,  KC_END, _______,
         _______,    KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT, _______,
         _______,    CT_LEFT, CT_DOWN,   CT_UP, CT_RGHT, _______, _______,
