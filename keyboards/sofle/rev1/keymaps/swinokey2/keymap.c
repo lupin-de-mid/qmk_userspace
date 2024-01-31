@@ -425,16 +425,19 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 enum combos {
   RED_SPACE_PURPLE,
   T_RU_SF,
-  ST_RU_S_SF
+  ST_RU_S_SF,
+  DELETE
 };
 
 const uint16_t PROGMEM purple_combo[] = { TT_RED,  CMB_SPC, COMBO_END};
 const uint16_t PROGMEM ru_hd_combo[] = { RU_T,  RU_SF, COMBO_END};
 const uint16_t PROGMEM ru_s_hd_combo[] = { RU_S_T,  RU_S_SF, COMBO_END};
+const uint16_t PROGMEM delete_combo[] = { CMB_BSP,  CMB_LAN, COMBO_END};
 combo_t key_combos[] = {
         [RED_SPACE_PURPLE]=COMBO(purple_combo, TT_PURPLE),
         [T_RU_SF]=COMBO(ru_hd_combo,RU_HD),
-        [ST_RU_S_SF]=COMBO(ru_s_hd_combo,RU_S_HD)// keycodes with modifiers are possible too!
+        [ST_RU_S_SF]=COMBO(ru_s_hd_combo,RU_S_HD),// keycodes with modifiers are possible too!
+        [DELETE]=COMBO(delete_combo,KC_DEL)
 };
 
 #ifdef ENCODER_ENABLE
