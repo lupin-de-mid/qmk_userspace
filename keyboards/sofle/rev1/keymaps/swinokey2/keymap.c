@@ -115,7 +115,7 @@ LAYOUT( \
  /* Right hand */ \
        RU1, RU2, RU3, RU4, RU5, RU6, \
        RH1, RH2, RH3, RH4, RH5, RH6, \
-       RD1, RD2, RD3, RD4, RD5, \
+       RD1, RD2, RD3, RD4,  \
   /* ---------------------------- Shift layer ---------------------------- */ \
     /* Left hand */ \
        SLU1, SLU2, SLU3, SLU4, SLU5, \
@@ -124,7 +124,7 @@ LAYOUT( \
  /* Right hand */ \
        SRU1, SRU2, SRU3, SRU4, SRU5, SRU6,\
        SRH1, SRH2, SRH3, SRH4, SRH5, SRH6, \
-       SRD1, SRD2, SRD3, SRD4, SRD5 \
+       SRD1, SRD2, SRD3, SRD4 \
 ) \
 /*-------------------------------------------------------------------------*/ \
       [L_DEFAULT] = MY_layout(  \
@@ -138,8 +138,8 @@ LAYOUT( \
          CMB_ASR, CMB_EXL,CMB_QUE, EN_HASH, AG_SLSH, CT_Z, \
              RU1,     RU2,     RU3,       RU4,     RU5,      RU6, \
              RH1,     RH2,     RH3,       RH4,     RH5,      RH6,                    \
-_______,     RD1,     RD2,     RD3,       RD4,     RD5,      AG_MINS,                    \
-TT_RED,  CMB_SPC, CMB_DOT, CMB_ALT, TT_GREEN \
+_______,     RD1,     RD2,     RD3,       RD4,     CMB_DOT,      AG_MINS,                    \
+TT_RED,  CMB_SPC, _______, CMB_ALT, TT_GREEN \
       ), \
       \
       /*-----------------------------------------------------------------*/ \
@@ -154,8 +154,8 @@ TT_RED,  CMB_SPC, CMB_DOT, CMB_ALT, TT_GREEN \
          AG_6,    AG_7,    AG_8,    AG_9,    AG_0,    CT_Y, \
          SRU1,    SRU2,    SRU3,    SRU4,    SRU5,    SRU6, \
          SRH1,    SRH2,    SRH3,    SRH4,    SRH5,    SRH6, \
- _______, SRD1,    SRD2,    SRD3,    SRD4,    SRD5,    EN_TILD,  \
- _______, _______, AG_COMM, _______, _______\
+ _______, SRD1,    SRD2,    SRD3,    SRD4,   AG_COMM,    EN_TILD,  \
+ _______, _______, _______, _______, _______\
       ),
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -170,7 +170,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         /* Right hand */
         EN_Y,    EN_U,    EN_I,    EN_O,    EN_P, _______,
         EN_H,    EN_J,    EN_K,    EN_L, _______,    _______,
-        EN_N,    EN_M,   _______,_______,_______,
+        EN_N,    EN_M,   _______,_______,
 
         /* ---------------------------- Shift layer ---------------------------- */
        /* Left hand */
@@ -181,7 +181,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         /* Right hand */
         EN_S_Y,    EN_S_U,    EN_S_I,    EN_S_O,  EN_S_P, _______,
         EN_S_H,    EN_S_J,    EN_S_K,    EN_S_L, _______, _______,
-        EN_S_N,    EN_S_M,   _______,   _______,  _______
+        EN_S_N,    EN_S_M,   _______,   _______
         )
 
     LANG_TWO_LAYERS(
@@ -195,7 +195,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         /* Right hand */
         RU_N,    RU_G,    RU_SH,   RU_SC,    RU_Z,    RU_H ,
         RU_R,    RU_O,    RU_L,    RU_D,    RU_ZH,    RU_E,
-        RU_T,    RU_SF,   RU_B,    RU_JU,    _______,
+        RU_T,    RU_SF,   RU_B,    RU_JU,
 
        /* ---------------------------- Shift layer ---------------------------- */
        /* Left hand */
@@ -206,7 +206,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         /* Right hand */
         RU_S_N,    RU_S_G,    RU_S_SH,    RU_S_SC,    RU_S_Z, RU_S_H,
         RU_S_R,    RU_S_O,    RU_S_L,     RU_S_D,     RU_S_ZH,    RU_S_E,
-        RU_S_T,    RU_S_SF,    RU_S_B,     RU_S_JU,   _______
+        RU_S_T,    RU_S_SF,    RU_S_B,     RU_S_JU
         )
 
 
