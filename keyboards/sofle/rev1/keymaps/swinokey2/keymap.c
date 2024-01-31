@@ -129,25 +129,25 @@ LAYOUT( \
 /*-------------------------------------------------------------------------*/ \
       [L_DEFAULT] = MY_layout(  \
 /* LEFT HALF */ \
-        KC_ESC,  CMB_PLS, CMB_SCL,  CMB_GRV, CMB_CLN, CMB_EQL, \
-        AG_UNDS,     LU1,     LU2,      LU3,     LU4,     LU5,    \
+        KC_ESC,  CMB_EXL,  EN_AT,  EN_HASH,   EN_DLR, EN_PERC, \
+        AG_MINS,     LU1,     LU2,      LU3,     LU4,     LU5,    \
         CMB_DQUE,    LH1,     LH2,      LH3,     LH4,     LH5,   \
-        EN_QUOT,     LD1,     LD2,      LD3,     LD4,     LD5,   _______,      \
+        EN_SLSH,     LD1,     LD2,      LD3,     LD4,     LD5,   _______,      \
                  CMB_CTL,  CMB_LAN, CMB_BSP, CMB_SFT, MT_ENTER, \
         /* RIGHT HALF */ \
-         CMB_ASR, CMB_EXL,CMB_QUE, EN_HASH, AG_SLSH, CT_Z, \
+         EN_CIRC, EN_AMPR ,EN_ASTR, EN_QUES, EN_QUOT, CT_Z, \
              RU1,     RU2,     RU3,       RU4,     RU5,      RU6, \
              RH1,     RH2,     RH3,       RH4,     RH5,      RH6,                    \
-_______,     RD1,     RD2,     RD3,       RD4,     CMB_DOT,      AG_MINS,                    \
+_______,     RD1,     RD2,     RD3,       RD4,     CMB_DOT,  AG_MINS,                    \
 TT_RED,  CMB_SPC, _______, CMB_ALT, TT_GREEN \
       ), \
       \
       /*-----------------------------------------------------------------*/ \
       [L_SHIFT] = MY_layout(/* LEFT HALF */ \
         _______, AG_1, AG_2, AG_3, AG_4, AG_5, \
-        _______, SLU1,    SLU2,    SLU3,    SLU4,    SLU5,     \
+        AG_UNDS, SLU1,    SLU2,    SLU3,    SLU4,    SLU5,     \
         _______, SLH1,    SLH2,    SLH3,    SLH4,    SLH5,     \
-        _______,    SLD1,    SLD2,    SLD3,    SLD4,    SLD5, _______,\
+        EN_BSLS,    SLD1,    SLD2,    SLD3,    SLD4,    SLD5, _______,\
                        _______, _______, _______, _______, _______,\
         \
         /* RIGHT HALF */ \
