@@ -264,31 +264,31 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #define HSV_CYAN_L        108, 255, 255
 
 const rgblight_segment_t PROGMEM en_layer_d[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, RGBLED_NUM, HSV_CYAN_D}
+    {0, RGBLIGHT_LED_COUNT, HSV_CYAN_D}
 );
 
 const rgblight_segment_t PROGMEM en_layer_l[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, RGBLED_NUM, HSV_CYAN_L}
+    {0, RGBLIGHT_LED_COUNT, HSV_CYAN_L}
 );
 
 const rgblight_segment_t PROGMEM ru_layer_d[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, RGBLED_NUM, HSV_GOLD}
+    {0, RGBLIGHT_LED_COUNT, HSV_GOLD}
 );
 
 const rgblight_segment_t PROGMEM ru_layer_l[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, RGBLED_NUM, HSV_ORANGE}
+    {0, RGBLIGHT_LED_COUNT, HSV_ORANGE}
 );
 
 const rgblight_segment_t PROGMEM red_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, RGBLED_NUM, HSV_RED}
+    {0, RGBLIGHT_LED_COUNT, HSV_RED}
 );
 
 const rgblight_segment_t PROGMEM green_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, RGBLED_NUM, HSV_GREEN}
+    {0, RGBLIGHT_LED_COUNT, HSV_GREEN}
 );
 
 const rgblight_segment_t PROGMEM purple_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, RGBLED_NUM, HSV_PURPLE}
+    {0, RGBLIGHT_LED_COUNT, HSV_PURPLE}
 );
 
 const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(

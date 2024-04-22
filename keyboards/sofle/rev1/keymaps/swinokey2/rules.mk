@@ -19,5 +19,5 @@ MAGIC_ENABLE = no
 BOOTMAGIC_ENABLE = no
 COMMAND_ENABLE = no
 
-#Link time optimise sise
+#Link time optimise size
 LTO_ENABLE = yes
