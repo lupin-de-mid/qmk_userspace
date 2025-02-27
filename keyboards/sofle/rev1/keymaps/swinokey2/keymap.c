@@ -34,7 +34,7 @@ enum sofle_layers {
 #define TT_PURPLE TT(L_PURPLE)
 #define MO_PURPLE MO(L_PURPLE)
 
-#define MT_ENTER LT(TT_RED, CMB_ENT)
+#define MT_ENTER LT(L_RED, KC_ENTER)
 
 //remap order of buutons from left right to lines
 #define MY_layout( \
@@ -79,7 +79,7 @@ LAYOUT( \
 #define CMB_BSP KC_BACKSPACE
 #define CMB_SFT SFT_N
 
-#define CMB_ENT KC_ENT
+
 #define CMB_EQL AG_EQL
 
 #define CMB_SLS AG_SLSH
@@ -220,8 +220,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
         // RIGHT HALF
                   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10, _______,
-                 CMB_RB2, CMB_RB1, CMB_LB1, CMB_LB2, _______, _______,
-                 CMB_LB4, CMB_LB3, CMB_RB3, CMB_RB4, _______, _______,
+                  _______,CMB_RB2, CMB_RB1, CMB_LB1, CMB_LB2, _______,
+                 _______,CMB_LB4, CMB_LB3, CMB_RB3, CMB_RB4,  _______,
         _______,  KC_TAB, _______, _______, _______, _______, _______,
         _______, _______, _______, _______, _______
         ),
